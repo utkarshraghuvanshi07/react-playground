@@ -2,9 +2,11 @@
 
 // jsx - javascript xml (markup)
 // Component -- function
-
+//  rules- file and function name first letter ->(uppercase) and call like elements
+// props in a functional component are blank objects
 
 import React, { Component } from "react";
+import About from "./About.jsx";
 
 let App = () => {
   // let h1 = React.createElement("h1",{},"yes boss")
@@ -28,6 +30,12 @@ let App = () => {
       <h1>hello</h1>
       <h2>hey</h2>
       <h3>good night</h3>
+      {/* {About("utkarsh")} */}
+
+      <About Width="500px" element={<h1>haji</h1>} >
+        <h1>hello</h1>
+      </About>
+      {/* <About element={<h1>hello</h1>} /> */}
     </div>
   );
 };
