@@ -18,13 +18,20 @@
 
 // export default App;
 
-import React from "react";
+import React, {useState} from "react";
 // import Navbar from "./components/Navbar";
 // import Hero from "./components/Hero";
 // import Footer from "./components/Footer";
 
 const App = () => {
-  let count = 0;
+  
+ let [count, setcount] = useState(0);
+
+ let [flag, setflag] = useState(true);
+console.log(flag);
+ 
+
+  // let count = 0;
 
   // let btn = document.querySelector("#btn");
   // btn.addEventListener("click",()=>{
@@ -35,10 +42,16 @@ const App = () => {
     <div>
       <h1>Count is - {count}</h1>
       <button onClick={()=>{
-        count++;
-        console.log("ignore hora h ");
+        setcount(count +=1 );
         
       }}>Increment</button>
+
+      
+      <button onClick={()=>{
+         setflag(false);
+         
+         
+      }}>Change Flag</button>
     </div>
   );
 };
